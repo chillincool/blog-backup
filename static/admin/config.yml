@@ -11,6 +11,7 @@ collections:
     folder: "content/post"
     create: true
     slug: "{{slug}}"
+    path: "{{slug}}/index"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "text" }
@@ -21,6 +22,7 @@ collections:
       - { label: "Tags", name: "tags", widget: "list" }
       - { label: "Weight", name: "weight", widget: "number", required: false }
       - { label: "Body", name: "body", widget: "markdown" }
+
 
   - name: "pages"
     label: "Pages"
