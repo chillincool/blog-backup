@@ -23,15 +23,77 @@ collections:
       - { label: "Weight", name: "weight", widget: "number", required: false }
       - { label: "Body", name: "body", widget: "markdown" }
 
-
   - name: "pages"
     label: "Pages"
-    folder: "content/page"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Slug", name: "slug", widget: "string" }
+    files:
+      - label: "Search Page"
+        name: "search"
+        file: "content/page/search/index.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Slug", name: "slug", widget: "string" }
+          - { label: "Layout", name: "layout", widget: "string" }
+          - label: "Outputs"
+            name: "outputs"
+            widget: "list"
+            field:
+              { label: "Format", name: "", widget: "string" }
+          - label: "Menu"
+            name: "menu"
+            widget: "object"
+            fields:
+              - { label: "Weight", name: "weight", widget: "number" }
+              - label: "Params"
+                name: "params"
+                widget: "object"
+                fields:
+                  - { label: "Icon", name: "icon", widget: "string" }
+
+      - label: "Archives Page"
+        name: "archives"
+        file: "content/page/archives/index.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Date", name: "date", widget: "datetime" }
+          - { label: "Slug", name: "slug", widget: "string" }
+          - { label: "Layout", name: "layout", widget: "string" }
+          - label: "Menu"
+            name: "menu"
+            widget: "object"
+            fields:
+              - { label: "Weight", name: "weight", widget: "number" }
+              - label: "Params"
+                name: "params"
+                widget: "object"
+                fields:
+                  - { label: "Icon", name: "icon", widget: "string" }
+
+      - label: "Links Page"
+        name: "links"
+        file: "content/page/links/index.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Slug", name: "slug", widget: "string" }
+          - label: "Links"
+            name: "links"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Website", name: "website", widget: "string" }
+              - { label: "Image", name: "image", widget: "string" }
+          - label: "Menu"
+            name: "menu"
+            widget: "object"
+            fields:
+              - { label: "Weight", name: "weight", widget: "number" }
+              - label: "Params"
+                name: "params"
+                widget: "object"
+                fields:
+                  - { label: "Icon", name: "icon", widget: "string" }
+          - { label: "Comments", name: "comments", widget: "boolean", required: false }
+
 
   - name: "categories"
     label: "Categories"
