@@ -1,6 +1,11 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: chillincool/blog
   branch: main
+  auth_type: oidc
+  client_id: XfvtbbdrLpf0WZogZRdJg7fP0aaZFNNW
+  auth_endpoint: https://auth.blog.chillincool.net/authorize
+
 
 media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
