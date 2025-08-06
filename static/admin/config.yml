@@ -14,11 +14,12 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "text" }
+      - { label: "Slug", name: "slug", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Draft", name: "draft", widget: "boolean", default: false }
-      - { label: "Tags", name: "tags", widget: "list" }
+      - { label: "Image", name: "image", widget: "image", required: false }
       - { label: "Categories", name: "categories", widget: "list" }
-      - { label: "Featured Image", name: "image", widget: "image", required: false }
+      - { label: "Tags", name: "tags", widget: "list" }
+      - { label: "Weight", name: "weight", widget: "number", required: false }
       - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "pages"
@@ -28,9 +29,7 @@ collections:
     slug: "{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "text", required: false }
-      - { label: "Draft", name: "draft", widget: "boolean", default: false }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Slug", name: "slug", widget: "string" }
 
   - name: "categories"
     label: "Categories"
